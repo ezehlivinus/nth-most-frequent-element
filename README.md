@@ -8,12 +8,15 @@ Given a list of integers, create a function that returns the nth-rarest item. Th
 // assuming 
 // list = [5, 4, 5, 4, 5, 4, 4, 5, 3, 3, 2, 2, 2, 1, 5]
 // n = 2
+
 const nth_most_rarest_item = (list,n) => {
   const counts = {};
 
   for (const num of list) {
     counts[num] = counts[num] ? counts[num] + 1 : 1;
   }
+  
+  // counts ==> { 1: 1, 2: 3, 3: 2, 4: 4, 5: 5 }
  
   // Object.entries(counts)  ==> [ [ '1', 1 ], [ '2', 3 ], [ '3', 2 ], [ '4', 4 ], [ '5', 5 ] ]
   // a ==>  [ '1', 1 ], b => [ '2', 3 ]
@@ -27,7 +30,7 @@ const nth_most_rarest_item = (list,n) => {
   // sorted[1][0] ==> 3 which is the nthRarestElement
   const nthRarestElement = sorted[n - 1][0];
 
-  return nthRarestElement;
+  return nthRarestElement; // ==> 3
 }
 
 console.log(nth_most_rarest_item([5, 4, 5, 4, 5, 4, 4, 5, 3, 3, 3, 2, 2, 2, 1, 5], 2)); // 2
