@@ -5,7 +5,8 @@ Given a list of integers, create a function that returns the nth-rarest item. Th
 
 ## code
 ```javascript
-// assuming list = [5, 4, 5, 4, 5, 4, 4, 5, 3, 3, 2, 2, 2, 1, 5]
+// assuming 
+// list = [5, 4, 5, 4, 5, 4, 4, 5, 3, 3, 2, 2, 2, 1, 5]
 // n = 2
 const nth_most_rarest_item = (list,n) => {
   const counts = {};
