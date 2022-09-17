@@ -19,8 +19,8 @@ const nth_most_rarest_item = (list,n) => {
   // counts ==> { 1: 1, 2: 3, 3: 2, 4: 4, 5: 5 }
  
   // Object.entries(counts)  ==> [ [ '1', 1 ], [ '2', 3 ], [ '3', 2 ], [ '4', 4 ], [ '5', 5 ] ]
-  // a ==>  [ '1', 1 ], b => [ '2', 3 ]
-  // a[1] ==> 1, b[1] ==> 3
+  // a ==>  [ '1', 1 ], b => [ '2', 3 ], ...until the last a and b..., a ==> [ '4', 4 ], b ==> [ '5', 5 ]
+  // a[1] ==> 1, b[1] ==> 3 // indexd the 2nd element of a and b for all a and b, and sort them in the process
   const sorted = Object.entries(counts).sort((a, b) => a[1] - b[1]);
 
   // sorted ==> [ [ '1', 1 ], [ '3', 2 ], [ '2', 3 ], [ '4', 4 ], [ '5', 5 ] ]
